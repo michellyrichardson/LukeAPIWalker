@@ -1,0 +1,1 @@
+axios.get(`http://www.swapi.dev/api/${resource}/${id}`)

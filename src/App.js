@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+//import Search from './components/Search';
+import People from './components/People';
+import Planets from './components/Planets';
+import PeopleNumber from './components/PeopleNumber';
+import PlanetNumber from './components/PlanetNumber';
+import Home from './components/Home';
+import { Router } from '@reach/router';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="stars">
+        <div class="twinkling">
+          <div class="clouds">
+            <Router>
+              <Home path="/" />
+              <People path="/people" />
+              <Planets path="/planets"/>
+              <PeopleNumber path="/people/:number"/>
+              <PlanetNumber path="/planets/:number"/>
+            </Router>
+            
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
